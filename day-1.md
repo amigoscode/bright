@@ -1,10 +1,10 @@
 # Getting Started with Java
-1. Download and install Java 
+1. Download and install Java 16
 https://www.oracle.com/java/technologies/javase-downloads.html
 > For **Windows** users you need to set JAVA_HOME environment variable. Follow this [example](https://javatutorial.net/set-java-home-windows-10)
 
-2.  IDE for Java Developemt  
-[IntelliJ](https://www.jetbrains.com/idea/) Donwload the **community** or **professional** version  
+2.  IDE for Java Development  
+[IntelliJ](https://www.jetbrains.com/idea/) Download the **community** or **professional** version  
 - Use **Amigo2021** and get IntelliJ professional for 3 months. Redeem [here](https://www.jetbrains.com/store/redeem/)
 
 3. Verify installation
@@ -58,7 +58,7 @@ Bytecodes are the machine language of the Java virtual machine. There are other 
 4. Kotlin
 5. Closure
 
-This means that we just need to jave JDK installed and we can write code in any other above languages.
+This means that we just need to have JDK installed and we can write code in any other above languages.
 
 This Java code needs to be compiled into bytecode for the JVM to run it.
 ```java
@@ -154,7 +154,7 @@ Comments are used to documment code or temporarily stop exuction of line or mult
 
 There single and multi line comments.
 
-# Single commments
+# Single comments
 ---
 Single comments start with `//` and can be seen in the following code as ```// write your code here``` 
 ```java
@@ -171,7 +171,7 @@ public class Main {
 
 Add a single line comment to ```System.out.println("Hello World");``` then run the application and see what the outout will be.    
 
-# Multiline commments
+# Multiline comments
 Multiline comments start with `/*` and end with `*/` any code or text inside opening `/*` and the closing of `*/` will be treated as a comment therefore the code will will not run 
 ```java
 package com.amigoscode;
@@ -199,13 +199,13 @@ If you want to store a sequence of characters
 String firstName = "Mariam";
 ```
 
-If you want to store some coordenates you can you for example
+If you want to store some coordinates you can you for example
 ```java
 Point p = new Point(20, 10);
 ```
 
 # Primitives
-Primitve types are used to store simple values. For example, whole numbers, decimal and characters. Here are the available data types for primitives.
+Primitive types are used to store simple values. For example, whole numbers, decimal and characters. Here are the available data types for primitives.
 
 - boolean
 - byte
@@ -341,7 +341,7 @@ Now both `brand` and `youtubeChannelName` refer to `Amigoscode`
 
 ![Screenshot 2021-08-18 at 11 46 55](https://user-images.githubusercontent.com/40702606/129885239-1bf52ba7-0af1-4800-b598-58e15d2d5a51.png)
 
-The reason Strings are immutable is beacuse image if there are other variables refering to `Amigoscode` and the value changes, i.e `Amigoscode` to `Friendscode`. This can be problematic since all other variables would have a different value due to this side effect causing all sorts of unexpected behaviour. To prevent this, Strings are immutable. 
+The reason Strings are immutable is because image if there are other variables referring to `Amigoscode` and the value changes, i.e `Amigoscode` to `Friendscode`. This can be problematic since all other variables would have a different value due to this side effect causing all sorts of unexpected behavior. To prevent this, Strings are immutable. 
 
 **What about**
 ```java
@@ -354,7 +354,7 @@ The difference is that when we create a String object using the new keyword, it 
 - `==` returns true if and only if both variables refer to the same object  
 - `.equals()` returns true the "value" inside String is the same   
   
-For this example `==` returns **true** becuase both `brand` and `youtubeChannelName` refer to the same object inside the **String Pool**.
+For this example `==` returns **true** because both `brand` and `youtubeChannelName` refer to the same object inside the **String Pool**.
 
 ```java
 String brand = "Amigoscode";
@@ -362,7 +362,7 @@ String youtubeChannelName = "Amigoscode";
 System.out.println(brand == youtubeChannelName); // True
 System.out.println(brand.equals(youtubeChannelName)); // True
 ```
-For this example `==` returns **false** becuase both `brand` and `youtubeChannelName` refer to different objects inside the **Heap**.
+For this example `==` returns **false** because both `brand` and `youtubeChannelName` refer to different objects inside the **Heap**.
 
 ```java
 String brand = new String("Amigoscode");
@@ -434,7 +434,7 @@ Output:
 */
 ```
 
-```for``` is the contruct. Then inside `()` we have: 
+```for``` is the construct. Then inside `()` we have: 
 - `int i = 1;` This is the initial expression
 - `i<=10;` This logical operator indicates when to stop the loop. If false keep looping else stop.
 - `i++` updates the value of initial expression.
@@ -702,4 +702,4 @@ public class Main {
 }
 ```
 
-`nextLine()` reads Strings input. There are other methods avaialable for diffrent data types.
+`nextLine()` reads Strings input. There are other methods available for different data types.

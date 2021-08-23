@@ -24,7 +24,7 @@ protected String name = "Amigoscode"
 ```
 
 # Methods
-A method is a block of code which only runs when invoked using `()`. We can use methods to reuse code that can be shared accross the entire application.
+A method is a block of code which only runs when invoked using `()`. We can use methods to reuse code that can be shared across the entire application.
 
 Methods are composed of
 - Access Modifier
@@ -78,10 +78,84 @@ public void printBrand() {
 ```
 
 # Enums
+An Enum is a type used specifically to represent sets of constants. For example, MALE or FEMALE.
+
+To create an Enum is as following:
+```java
+public class Main {
+
+    enum Gender {
+        MALE,
+        FEMALE
+    }
+
+    public static void main(String[] args) {
+        Gender male = Gender.MALE;
+        Gender female = Gender.FEMALE;
+    }
+
+}
+```
+
 
 # Working with Dates
+Java has a great API for working with dates. You should be aware of these classes:
+- LocalDate
+- LocalDateTime
+- LocalTime 
+
+```java
+package com.amigoscode;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+
+public class Main {
+    public static void main(String[] args) {
+        LocalDate localDate = LocalDate.now();
+        LocalDateTime localDateTime = LocalDateTime.now();
+        LocalTime localTime = LocalTime.now();
+    }
+}
+```
+
+Explore the methods available for each classes.
 
 # Error Handling
+When building applications things can go wrong and it is best practice to handle scenarios where our code does not behave as expected. Or simply deal with errors that we can anticipate.
+
+I java we errors are called Exceptions and we can deal with them using the following constructs:
+- The **try** statement allows you to define a block of code to be tested for errors while it is being executed.
+- The **catch** statement allows you to define a block of code to be executed, if an error occurs in the try block.
+
+```java
+try {
+  //  Block of code to try
+}
+catch(Exception e) {
+  //  Block of code to handle errors
+}
+```
+
+## Checked Exceptions
+Checked exceptions represent errors outside the control of the program. For example reading a file. You need to handle this error during compile time otherwise your code will not compile.
+
+```java
+File file = new File("file.txt");
+try {
+    FileInputStream stream = new FileInputStream(file);
+} catch (FileNotFoundException e) {
+    e.printStackTrace();
+}
+```
+
+## Unchecked Exceptions
+If a program throws an unchecked exception, it reflects some error inside the program logic. For example, if we divide a number by 0, Java will throw ArithmeticException:
+
+```java
+System.out.println(10 / 0);
+```
 
 # Working with files
 
