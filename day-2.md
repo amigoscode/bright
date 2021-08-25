@@ -157,6 +157,42 @@ If a program throws an unchecked exception, it reflects some error inside the pr
 System.out.println(10 / 0);
 ```
 
+# Optionals
+
 # Working with files
 
-# Optionals
+```java
+package com.amigoscode;
+
+import java.io.*;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        // create file
+        File file = new File("src/hello.txt");
+        if (!file.exists()) {
+            file.createNewFile();
+        }
+
+        FileWriter fileWriter = new FileWriter(file);
+        PrintWriter printWriter = new PrintWriter(fileWriter);
+        printWriter.println("hello");
+        printWriter.flush();
+        printWriter.close();
+
+        // read example 1
+        FileReader fileReader = new FileReader(file);
+        BufferedReader bufferedReader = new BufferedReader(fileReader);
+        System.out.println(bufferedReader.readLine());
+
+        // read example 2
+        Scanner scanner = new Scanner(file);
+        while (scanner.hasNext()) {
+            System.out.println(scanner.nextLine());
+        }
+    }
+}
+
+```
+
