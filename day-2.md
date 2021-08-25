@@ -178,15 +178,12 @@ public class Main {
         FileWriter fileWriter = new FileWriter(file);
         PrintWriter printWriter = new PrintWriter(fileWriter);
         printWriter.println("hello");
+
+        // once you are done writing to the file
         printWriter.flush();
         printWriter.close();
 
-        // read example 1
-        FileReader fileReader = new FileReader(file);
-        BufferedReader bufferedReader = new BufferedReader(fileReader);
-        System.out.println(bufferedReader.readLine());
-
-        // read example 2
+        // read example 
         Scanner scanner = new Scanner(file);
         while (scanner.hasNext()) {
             System.out.println(scanner.nextLine());
@@ -195,4 +192,3 @@ public class Main {
 }
 
 ```
-
