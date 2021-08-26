@@ -161,3 +161,6 @@ public int hashCode() {
     return Objects.hash(name, email, phoneNumber, gender);
 }
 ```
+
+# Examples
+https://github.com/amigoscode/bright/tree/main/examples
