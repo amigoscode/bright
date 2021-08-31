@@ -157,7 +157,6 @@ If a program throws an unchecked exception, it reflects some error inside the pr
 System.out.println(10 / 0);
 ```
 
-# Optionals
 
 # Working with files
 
