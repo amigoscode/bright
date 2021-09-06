@@ -1,4 +1,4 @@
-package com.darrentech.execption;
+package com.darrentech.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

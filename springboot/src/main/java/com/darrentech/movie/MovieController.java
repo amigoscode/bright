@@ -11,7 +11,6 @@ import java.util.List;
 @RequestMapping(path = "api/movies")
 public class MovieController {
 
-    // TODO: Implement delete movie
     // TODO: Implement update movie
 
     private MovieService movieService;
@@ -54,7 +53,7 @@ public class MovieController {
     // i.e DELETE localhost:8080/api/movie/fast9
     @DeleteMapping("{movieName}")
     public void deleteMovies(@PathVariable("movieName") String movieName) {
-        // TODO: Implement delete super hero
+        // TODO: Implement delete movie
     }
 
 }
