@@ -26,7 +26,7 @@ public class MovieController {
     }
 
     // i.e localhost:8080/api/superhero/hulk
-    @GetMapping({"movieName"})
+    @GetMapping("{movieName}")
     public Movie getSuperHeroByName(@PathVariable("movieName") String movieName) {
         /*
             TODO: Find and return superHeroName in db if not present throw new MovieNotFoundException("message");
