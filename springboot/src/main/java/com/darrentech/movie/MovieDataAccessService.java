@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Repository
@@ -20,10 +21,17 @@ public class MovieDataAccessService {
                 "Iron Man",
                 List.of(ironMan, hulk),
                 LocalDate.of(2017, 1 , 25));
-        db = List.of(movie);
+
+        db = new ArrayList<>();
+        db.add(movie);
     }
 
     public List<Movie> selectAllMoviesMovies() {
         return db;
     }
+
+    public void insertMovie(Movie movie) {
+        db.add(movie);
+    }
+    
 }

@@ -17,6 +17,18 @@ public class Movie {
         this.releaseDate = releaseDate;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSuperHeroes(List<SuperHero> superHeroes) {
+        this.superHeroes = superHeroes;
+    }
+
+    public void setReleaseDate(LocalDate releaseDate) {
+        this.releaseDate = releaseDate;
+    }
+
     public String getName() {
         return name;
     }
@@ -50,4 +62,5 @@ public class Movie {
     public int hashCode() {
         return Objects.hash(name, superHeroes, releaseDate);
     }
+
 }

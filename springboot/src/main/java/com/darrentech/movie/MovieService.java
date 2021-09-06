@@ -18,14 +18,11 @@ public class MovieService {
     }
 
     public List<Movie> getMovies() {
-        SuperHero ironMan = new SuperHero("IronMan", "Rich/Intelligent");
-        SuperHero hulk = new SuperHero("Hulk", "Strength");
+        return movieDataAccessService.selectAllMoviesMovies();
+    }
 
-        Movie movie = new Movie(
-                "Iron Man",
-                List.of(ironMan, hulk),
-                LocalDate.of(2017, 1 , 25));
-
-        return List.of(movie);
+    public void addNewMovie(Movie movie) {
+        // TODO: check if movie exists
+        movieDataAccessService.insertMovie(movie);
     }
 }
