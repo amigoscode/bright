@@ -1,4 +1,4 @@
-package com.darrentech.demo;
+package com.darrentech.superhero;
 
 import java.util.Objects;
 
