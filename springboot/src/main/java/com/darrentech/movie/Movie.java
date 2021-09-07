@@ -11,7 +11,9 @@ public class Movie {
     private List<SuperHero> superHeroes;
     private LocalDate releaseDate;
 
-    public Movie(String name, List<SuperHero> superHeroes, LocalDate releaseDate) {
+    public Movie(String name,
+                 List<SuperHero> superHeroes,
+                 LocalDate releaseDate) {
         this.name = name;
         this.superHeroes = superHeroes;
         this.releaseDate = releaseDate;

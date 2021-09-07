@@ -33,5 +33,9 @@ public class MovieDataAccessService {
     public void insertMovie(Movie movie) {
         db.add(movie);
     }
+
+    public void deleteMovie(Movie movie) {
+        db.remove(movie);
+    }
     
 }

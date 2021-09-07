@@ -18,7 +18,7 @@ CREATE TABLE super_hero (
 );
 
 insert into movie(movie_name, release_date) values ('The Incredible Hulk', now());
-insert into super_hero(super_hero_name, movie) values ('Hulk', (select id from movie where movie_name = 'The Incredible Hulk'));
+insert into super_hero(super_hero_name, movie) values ('Hulk', );
 
 ============================================================
 add the following maven dependencies:

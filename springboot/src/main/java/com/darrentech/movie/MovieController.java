@@ -27,12 +27,12 @@ public class MovieController {
 
     // i.e localhost:8080/api/superhero/hulk
     @GetMapping("{movieName}")
-    public Movie getSuperHeroByName(@PathVariable("movieName") String movieName) {
+    public Movie getMovieByName(@PathVariable("movieName") String movieName) {
         /*
             TODO: Find and return superHeroName in db if not present throw new MovieNotFoundException("message");
             Note that business logic should be in MovieService
          */
-        return null;
+        return movieService.getMovie(movieName);
     }
 
     /*
@@ -54,6 +54,12 @@ public class MovieController {
     @DeleteMapping("{movieName}")
     public void deleteMovies(@PathVariable("movieName") String movieName) {
         // TODO: Implement delete movie
+        movieService.deleteMovie(movieName);
+    }
+
+    @PutMapping
+    public void updateMovie(@RequestBody Movie movie) {
+        movieService.updateMovie(movie);
     }
 
 }
