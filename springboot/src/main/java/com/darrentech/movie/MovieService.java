@@ -1,11 +1,8 @@
 package com.darrentech.movie;
 
 import com.darrentech.exception.MovieNotFoundException;
-import com.darrentech.superhero.SuperHero;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.util.List;
 
 //MovieService movieService = new MovieService()
@@ -13,9 +10,12 @@ import java.util.List;
 public class MovieService {
 
     private MovieDataAccessService movieDataAccessService;
+    private MovieDataAccessServicePostgres movieDataAccessServicePostgres;
 
-    public MovieService(MovieDataAccessService movieDataAccessService) {
+    public MovieService(MovieDataAccessService movieDataAccessService,
+                        MovieDataAccessServicePostgres movieDataAccessServicePostgres) {
         this.movieDataAccessService = movieDataAccessService;
+        this.movieDataAccessServicePostgres = movieDataAccessServicePostgres;
     }
 
     public List<Movie> getMovies() {
@@ -24,7 +24,10 @@ public class MovieService {
 
     public void addNewMovie(Movie movie) {
         // TODO: check if movie exists
-        movieDataAccessService.insertMovie(movie);
+        int result = movieDataAccessServicePostgres.insertMovie(movie);
+        if (result != 1) {
+            throw new IllegalStateException("oops something went wrong");
+        }
     }
 
     public void deleteMovie(String movieName) {
