@@ -1,5 +1,7 @@
 ```
-install Postgres or Mysql
+============================================================
+install Postgres or Mysql and the the following sql
+============================================================
 
 CREATE TABLE movie (
 	id bigserial primary key,
@@ -18,7 +20,9 @@ CREATE TABLE super_hero (
 insert into movie(movie_name, release_date) values ('The Incredible Hulk', now());
 insert into super_hero(super_hero_name, movie) values ('Hulk', (select id from movie where movie_name = 'The Incredible Hulk'));
 
+============================================================
 add the following maven dependencies:
+============================================================
 
 <dependency>
 	<groupId>org.postgresql</groupId>
@@ -31,7 +35,9 @@ add the following maven dependencies:
 	<artifactId>spring-boot-starter-data-jdbc</artifactId>
 </dependency>
 
+============================================================
 add the following to application.properties
+============================================================
 
 # Postgres
 spring.datasource.url=jdbc:postgresql://localhost:5432/bright
@@ -45,6 +51,9 @@ spring.datasource.driver-class-name=org.postgresql.Driver
 #spring.datasource.password=?
 #spring.datasource.driver-class-name=com.mysql.jdbc.Driver
 
+============================================================
 Inject JdbcTemplate to your DataAccess services
+============================================================
+
 private JdbcTemplate jdbcTemplate;
 ```
